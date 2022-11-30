@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    min-height: 100vh;
+    width: 100vw;
+}
+.main .nav{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(185deg, grey, rgb(214, 224, 203));
+    position: fixed;
+}
+.main .nav .logo{
+    padding: 7px;
+    border: 2px groove greenyellow;
+    border-radius: 5px;
+    color: greenyellow;
+    background-image: linear-gradient(45deg, grey,rgb(177, 223, 147));
+    margin: 7px;
+}
+.main .nav .navlinks{
+    margin-right: 27px;
+}
+.main .nav .navlinks ul{
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+}
+.main .nav .navlinks ul li{
+    list-style: none;
+}
+.main .nav .navlinks ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-size: 18px;
+}
+.main .nav .navlinks ul li a:hover{
+    border-bottom: 2px groove greenyellow;
+    transition: all .2s ease;
+}
+.main .nav .burger{
+    padding: 5px;
+    border: 2px groove greenyellow;
+    border-radius: 5px;
+    margin: 5px;
+    z-index: 1000;
+    display: none;
+}
+.main .nav .burger:first-child{
+    margin-top: 0px;
+}
+.main .nav .burger .line{
+    width: 17px;
+    height: 3px;
+    background-color: greenyellow;
+    margin-top: 4px;
+}
+@media only screen and (max-width:780px){
+    .main .nav .navlinks ul{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(175deg, grey,rgb(177, 223, 147));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-in;
+        display: none;
+    }
+    .main.active .nav .navlinks ul{
+        display: flex;
+        transition: all .3s ease-in;
+    }
+    .main .nav .navlinks ul li{
+        margin-top: 75px;
+        padding: 5px;
+    }
+    .main .nav .navlinks ul li a{
+        font-size: 29px;
+    }
+     .main .nav .burger{
+        display: block;
+        margin-right: 35px;
+        cursor: pointer;
+    }
+    
+}
